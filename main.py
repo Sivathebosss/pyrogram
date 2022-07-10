@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 
-API_ID=""
-API_HASH=""
-BOT_TOKEN=""
+API_ID="14486797"
+API_HASH="bf3b9df595c63aab3052f43fe1939068"
+BOT_TOKEN="5461167123:AAHqanDb4568Wlt2gVtoY41248j_XyQ6pkM"
 
 
 Siva = Client(
