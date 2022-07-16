@@ -7,9 +7,9 @@ BOT_TOKEN="5461167123:AAHqanDb4568Wlt2gVtoY41248j_XyQ6pkM"
 
 Siva = Client(
       name="pyrogram",
-      api_id="API_ID",
-      api_hash="API_HASH",
-      bot_token="BOT_TOKEN",
+      api_id=API_ID,
+      api_hash=API_HASH,
+      bot_token=BOT_TOKEN
 )
 
 @Siva.on_command(filers.command("start"))
