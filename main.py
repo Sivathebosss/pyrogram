@@ -13,7 +13,7 @@ Siva = Client(
 )
 
 @Siva.on_command(filers.command("start"))
-async def start_cmd(bot, message):
+async def start_cmd(client, message):
     await message.reply_text("Hello welcome back")
 
 
