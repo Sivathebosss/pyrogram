@@ -12,7 +12,7 @@ Siva = Client(
       bot_token=BOT_TOKEN
 )
 
-@Siva.on_message(filers.command("start"))
+@Siva.on_message(filters.command("start"))
 async def start_cmd(client, message):
     await message.reply_text("Hello welcome back")
 
