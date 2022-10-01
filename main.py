@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 API_ID="14486797"
 API_HASH="bf3b9df595c63aab3052f43fe1939068"
@@ -12,9 +13,16 @@ Siva = Client(
       bot_token=BOT_TOKEN
 )
 
+STATS = [[
+ InlineKeyboardButton("hi", url="t.me/Sivatheking_1")
+]]
+
 @Siva.on_message(filters.command("start"))
 async def start_cmd(client, message):
-    await message.reply_text("Hello welcome back")
+    await message.reply_text(
+        text="Hello welcome back",
+        reply_markup=InlineKeyboardMarkup(STATS)
+    )
 
 
 
