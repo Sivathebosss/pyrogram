@@ -37,9 +37,9 @@ async def start_cmd(client, message):
 async def callback_query(client, msg: CallbackQuery):
     if msg.data == "start":
 
-       reply1 = await msg.message("I am working"),
+       reply1 = await msg.message.edit("I am working"),
        await asyncio.sleep(0.4),
-       await reply1.message(HI)
+       await reply1.message.edit(HI)
 
 
 
