@@ -39,7 +39,7 @@ async def callback_query(client, msg: CallbackQuery):
 
        reply1 = await msg.message.edit("I am working"),
        await asyncio.sleep(0.4),
-       await reply1.message.edit(HI)
+       await reply1.edit(HI)
 
 
 
