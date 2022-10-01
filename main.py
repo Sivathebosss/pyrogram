@@ -19,8 +19,12 @@ Siva = Client(
 )
 
 STATS = [[
- InlineKeyboardButton("hi", url="t.me/Sivatheking_1")
+ InlineKeyboardButton("data", callback_data=start)
 ]]
+
+HI = f""" 
+Hello {msg.from_user.mention}
+I am working perfectly
 
 @Siva.on_message(filters.command("start"))
 async def start_cmd(client, message):
@@ -31,7 +35,10 @@ async def start_cmd(client, message):
 
 @Siva.on_callback_query()
 async def callback_query(client, msg: CallbackQuery):
-    if 
+    if msg.data == "start"
+       reply1 = await msg.message("I am working")
+       await asyncio.sleep(0.4)
+       await reply1.message(I am working)
 
 
 
