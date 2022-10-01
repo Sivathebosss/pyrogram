@@ -1,5 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import CallbackQuery, ReplyKeyboardMarkup
+
+
+
+
 
 API_ID="14486797"
 API_HASH="bf3b9df595c63aab3052f43fe1939068"
@@ -24,7 +29,9 @@ async def start_cmd(client, message):
         reply_markup=InlineKeyboardMarkup(STATS)
     )
 
-
+@Siva.on_callback_query()
+async def callback_query(client, msg: CallbackQuery):
+    if 
 
 
 
