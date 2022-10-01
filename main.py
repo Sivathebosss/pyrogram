@@ -23,7 +23,7 @@ STATS = [[
 ]]
 
 HI = f""" 
-Hello {msg.from_user.mention}
+Hello {message.from_user.mention}
 I am working perfectly"""
 
 @Siva.on_message(filters.command("start"))
