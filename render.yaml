@@ -1,17 +1,20 @@
-services:
+services:services:servicesservices:
+  # A web service on the Ruby native runtime
   - type: web
-    plan: free
-    name: siva
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python3 main.py
-    repo: https://github.com/Sivathebosss/pyrogram     
-    branch: main
-    envVars:
-      - key: BOT_TOKEN 
-        sync: false
-      - key: API_ID 
-        sync: false
-      - key: API_HASH
-        sync: false    
-    autoDeploy: false
+    runtime: python
+    name: sinatra-app
+    repo: https://github.com/Sivathebosss/pyrogram.git # Default: Repo containing render.yaml
+    numInstances: 3   # Manual scaling configuration. Default: 1 for new services
+    region: oregon # Default: oregon
+    plan: starter    # Default: starter
+    branch: main     # Default: master
+    buildCommand: bundle install
+    preDeployCommand: bundle exec python3 migrate.py
+    startCommand: bundle exec python3 main.py
+    autoDeploy: false # Disable automatic deploys
+    maxShutdownDelaySeconds: 120 # Increase graceful shutdown period. Default: 30, Max: 300
+    domains: # Custom domains
+      - example.com
+      - www.example.org
+    
+        
