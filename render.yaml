@@ -1,17 +1,17 @@
-# This is a basic example Blueprint for a Django web service and
-# the PostgreSQL database it connects to.
+
 services:
-  - type: web # A Python web service named django-app running on a free instance
-    plan: free
-    name: pyrogram
-    runtime: python
-    repo: https://github.com/Sivathebosss/pyrogram.git
-    buildCommand: "./build.sh"
-    startCommand: "python3 main.py"
+  - type: web
+    name: my-app
+    env: 
+    buildCommand: npm ci
+    startCommand: npm start
     envVars:
-      - key: API_ID # Sets DATABASE_URL to the connection string of the django-app-db database
-        value: ""
-      - key: API_HASH
-        value: ""
-      - key: BOT_TOKEN
-        value: ""
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+    plan: free
+    healthCheckPath: /
+    autoDeploy: true
+    domains:
+      - my-app.onrender.com
