@@ -41,6 +41,8 @@ async def start_cmd(client, message):
     )
 @Siva.on_message(filters.command("data")) 
 async def data_cmd(client, msg):
+      if msg.text == "/data":
+            await msg.reply_text("Give me character name \nEx:- /data Cho Kyuhwan") 
       if msg.text == "/data Cho Kyuhwan":
             await msg.reply_text(HI) 
       else:
