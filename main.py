@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery, ReplyKeyboardMarkup
 import asyncio
-
+import Config as C
 
 
 
@@ -13,9 +13,9 @@ BOT_TOKEN="5461167123:AAE1tq-c4jVO4QlQ3UKop2vg8AnOmg0HYBA"
 
 Siva = Client(
       name="pyrogram",
-      api_id=API_ID,
-      api_hash=API_HASH,
-      bot_token=BOT_TOKEN
+      api_id=C.API_ID,
+      api_hash=C.API_HASH,
+      bot_token=C.BOT_TOKEN
 )
 
 STATS = [[
