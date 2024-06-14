@@ -14,5 +14,5 @@ services:
         value: 14486797
       - key: API_HASH
         value: bf3b9df595c63aab3052f43fe1939068
-      - key: TOKEN
+      - key: BOT_TOKEN
         value: 5461167123:AAH2zJ3UQLYLPid0IzrAhf_0f20uEycWO3o
