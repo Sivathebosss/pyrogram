@@ -6,9 +6,7 @@ import Config as C
 
 
 
-API_ID="20645043"
-API_HASH="4592a3effabac741aa003be13b78c513"
-BOT_TOKEN="5461167123:AAE1tq-c4jVO4QlQ3UKop2vg8AnOmg0HYBA"
+
 
 
 Siva = Client(
