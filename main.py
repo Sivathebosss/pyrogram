@@ -21,6 +21,7 @@ STATS = [[
 ]]
 
 HI = f""" 
+CHARACTER: Cho Kyuhwan
 Type: Mage
 Rank: C
 
@@ -41,7 +42,7 @@ async def start_cmd(client, message):
 @Siva.on_message(filters.command("data")) 
 async def data_cmd(client, msg):
       if msg.text == "/data Cho Kyuhwan":
-            await msg.reply_text(Hi) 
+            await msg.reply_text(HI) 
       else:
             await msg.reply_text(" Please provide valid character name") 
       
