@@ -13,8 +13,7 @@ Siva = Client(
       name="pyrogram",
       api_id=C.API_ID,
       api_hash=C.API_HASH,
-      bot_token=C.BOT_TOKEN, 
-      port=8000
+      bot_token=C.BOT_TOKEN
 )
 
 STATS = [[
@@ -22,8 +21,14 @@ STATS = [[
 ]]
 
 HI = f""" 
-Hello, 
-I am working perfectly"""
+Type: Mage
+Rank: C
+
+Strength: 55
+Agility: 65
+Stamina: 50
+Intelligence: 35
+Perception: 45"""
 
 @Siva.on_message(filters.command("start"))
 async def start_cmd(client, message):
@@ -33,7 +38,13 @@ async def start_cmd(client, message):
     await message.reply_text(
         text="Hello welcome back"
     )
-
+@Siva.on_message(filters.command("data")) 
+async def data_cmd(client, msg):
+      if msg.text == "/data Cho Kyuhwan":
+            await msg.reply_text(Hi) 
+      else:
+            await msg.reply_text(" Please provide valid character name") 
+      
 
 
 
