@@ -1,17 +1,18 @@
 
 services:
   - type: web
-    name: my-app
-    env: 
-    buildCommand: npm ci
-    startCommand: npm start
+    name: my-python-app
+    env: python
+    repo: https://github.com/Sivathebosss/pyrogram
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
     envVars:
       - key: PORT
-        value: 3000
-      - key: NODE_ENV
-        value: production
-    plan: free
-    healthCheckPath: /
-    autoDeploy: true
-    domains:
-      - my-app.onrender.com
+        value: 8000
+      - key: API_ID
+        value: 14486797
+      - key: API_HASH
+        value: bf3b9df595c63aab3052f43fe1939068
+      - key: TOKEN
+        value: 5461167123:AAH2zJ3UQLYLPid0IzrAhf_0f20uEycWO3o
