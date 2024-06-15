@@ -54,4 +54,6 @@ async def data_cmd(client, msg):
 
 print("Bot started")
 
-Siva.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000)
+     
