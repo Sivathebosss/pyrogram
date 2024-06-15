@@ -7,9 +7,8 @@ services:
     branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
+    port: 8080
     envVars:
-      - key: PORT
-        value: 8000
       - key: API_ID
         value: 14486797
       - key: API_HASH
