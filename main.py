@@ -55,5 +55,5 @@ async def data_cmd(client, msg):
 print("Bot started")
 
 if __name__ == '__main__':
-    Siva.run(host='0.0.0.0', port=8000)
+    Siva.run(port=8000)
      
